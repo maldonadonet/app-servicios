@@ -1,15 +1,45 @@
-<!--
-  Generated template for the ServicehomePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-  <ion-navbar>
-    <ion-title>servicehome</ion-title>
-  </ion-navbar>
+    <ion-title>LISTADO DE SERVICIOS</ion-title>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-input type="text" fixed placeholder="¿Qué servicio estas buscando?" round></ion-input>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <div text-center>
+                    <button ion-button round full (click)="filtrar()">Filtrar</button>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <ion-item>
+            <ion-card *ngFor="let servicio of serviceCtrl.servicios">
+                <img src="https://www.articulosinnovadoresleo.com/img_servicios/{{servicio.img_servicio}}"/>
+                <ion-card-content>
+                    <ion-card-title>
+                        {{servicio.nom_corto}}
+                    </ion-card-title>
+                    Tipo de servicio: <strong>{{ servicio.tipo_servicio}}</strong><br>
+                    Categoría: <strong>{{ servicio.categoria }}</strong>
+                    <p>
+                        {{ servicio.descripcion }}
+                    </p>
+                    <button ion-button 
+                            class="btn-primary" 
+                            block 
+                            round 
+                            [navPush]="servicedetail" 
+                            [navParams]="{ item:servicio }">Detalles</button>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-list>
 </ion-content>
+
+<ion-footer>
+    <h2 text-center>CONSTRUFIX</h2>
+</ion-footer>

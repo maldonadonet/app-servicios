@@ -1,15 +1,16 @@
-<!--
-  Generated template for the ServicedetailPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-  <ion-navbar>
-    <ion-title>servicedetail</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{servicio.nom_corto}}</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    <img src="https://www.articulosinnovadoresleo.com/img_servicios/{{servicio.img_servicio}}"/>
+    <h1>{{servicio.nom_corto}}</h1>
+    <p><strong>Descripción: </strong> {{servicio.descripcion}}</p>
+    <p><strong>Tipo de servicio: </strong> {{ servicio.tipo_servicio }}</p>
+    <p><strong>Categoría: </strong> {{ servicio.categoria }}</p>
+    <hr>
+
 
 </ion-content>

@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ServiciosProvider } from '../../providers/servicios/servicios';
 
-/**
- * Generated class for the ServicedetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,7 +10,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ServicedetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  servicio:any = {};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,private _sp:ServiciosProvider) {
+    this.servicio =  this.navParams.get('item');
+    console.log(this.servicio);
   }
 
   ionViewDidLoad() {

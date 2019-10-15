@@ -1,25 +1,27 @@
 <ion-content padding>
-    <ion-grid>
-        <ion-row style="margin-top: 10%;">
-            <ion-col col-10 offset-1>
-                <img src="https://www.ail.com.mx/images/logoleo.png" />
-            </ion-col>
-        </ion-row>
-        <ion-row style="margin-top: 10%;">
-            <ion-col col-12>
-                <h1 text-center>SERVICIOS PROFESIONALES</h1>
-                <p></p>
-            </ion-col>
-        </ion-row>
-        <ion-row style="margin-top: 10%;">
-            <ion-col col-12>
-                <button ion-button block round style="background-color: #c70039;">
-                Login
-                </button>
-                <button ion-button block round style="background-color: #c70039;">
-                Register
-                </button>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+	<ion-slides pager>
+
+		<ion-slide>
+			<img src="assets/imgs/mantenimiento.svg" style="width:80%">
+			<h2 color="primary">Mantenimiento & Reparación</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore.</p>
+		</ion-slide>
+
+		<ion-slide>
+			<img src="assets/imgs/industry1.svg" style="width: 80%">
+			<h2>Proyectos & Obras</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore.</p>
+		</ion-slide>
+
+		<ion-slide>
+			<img src="assets/imgs/logo2.png" style="width: 50%;">
+			<h2>SERVICIOS PROFESIONALES</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor.</p>
+			<button ion-button round block (click)="iniciar()">Ingresar</button>
+		</ion-slide>
+
+	</ion-slides>
 </ion-content>
